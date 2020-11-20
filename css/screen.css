@@ -586,6 +586,11 @@
       ---
       Everything form related here
   */
+
+  .c-form-field {
+    max-width: 280px;
+    margin: 0 auto var(--global-whitespace-md);
+  }
   
   .c-form-field--option {
     display: -webkit-flex;
@@ -593,6 +598,11 @@
     display: flex;
     -ms-align-items: center;
     align-items: center;
+  }
+
+  .c-description {
+    margin: 0 0 calc(var(--global-whitespace) * 2.5);
+    line-height: calc(var(--global-baseline) * 2.5);
   }
   
   /*
@@ -727,6 +737,16 @@
   }
   
   /*
+      Component: Image
+      ---
+      Class to put on all images
+  */
+
+  .c-image {
+    margin-top: var(--global-whitespace-md);
+  }
+
+  /*
       Component: Label
       ---
       Class to put on all form labels
@@ -852,6 +872,8 @@
   }
   
   .u-mb-md {
+    margin: auto;
+    max-width: 280px;
     margin-bottom: var(--global-whitespace-md) !important;
   }
   
@@ -1076,6 +1098,50 @@
     }
     .u-5-of-6-bp3 {
       width: 83.3333333333% !important;
+    }
+
+    .c-card__body {
+      padding: 0;
+    }
+
+    .c-card__title {
+      margin-bottom: calc(var(--global-whitespace) / 2);
+    }
+
+    .c-card__title2 {
+      font-size: 36px;
+      line-height: 1.1;
+      /* font-weight: bold; */
+      max-width: 336px;
+      margin-bottom: calc(var(--global-whitespace) / 2);
+    }
+
+    .c-description {
+      max-width: 240px;
+      margin: 0 0 calc(var(--global-whitespace) * 2.5);
+    }
+
+    .o-section-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .c-form-field {
+      max-width: 280px;
+      margin: 0 var(--global-whitespace) 0 0;
+    }
+
+    .c-image {
+      max-width: 280px;
+    }
+
+    .c-button {
+      width: 168px;
+    }
+
+    .c-card__body {
+      
     }
   }
   
