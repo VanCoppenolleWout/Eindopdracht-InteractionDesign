@@ -53,6 +53,7 @@
 
   /* border stuff */
   --global-borderRadius: 30px;
+  --global-borderRadius-sm: 15px;
   --global-borderWidth: 1px;
 
   /* transitions */
@@ -93,7 +94,6 @@ html {
   line-height: 1.5;
   font-family: "Inter Web", Helvetica, arial, sans-serif;
   color: var(--global-color-neutral-xxxx-dark);
-  
   background: linear-gradient(#C1D5F6, #DFE7F3);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -350,6 +350,13 @@ input::placeholder {
   width: 100%;
 }
 
+.o-layout__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--global-whitespace);
+}
+
 /* gutter modifiers, these affect o-layout__item too */
 
 .o-layout--gutter {
@@ -572,6 +579,12 @@ input::placeholder {
   font-size: 32px;
   line-height: calc(var(--global-baseline) * 4);
   font-weight: 600;
+}
+
+.c-card__title-value {
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: normal;
 }
 
 /* This allows c-card__body and __footer to have equal padding everywhere */
@@ -816,6 +829,8 @@ input::placeholder {
       Class to put on form buttons or
   */
 
+
+
 .c-button {
   font-size: 16px;
   font-weight: 700;
@@ -842,6 +857,101 @@ input::placeholder {
 .c-button:active {
   background-color: var(--global-color-alpha-dark);
   box-shadow: none;
+}
+
+.c-card__title-card {
+  margin-bottom: var(--global-whitespace-md);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.c-gamecard {
+  border: var(--global-borderWidth) solid #3C7DD9;
+  border-radius: var(--global-borderRadius-sm);
+  background: linear-gradient(#FFFFFF, #E7EEF9);
+  max-width: 148px;
+  max-height: 148px;
+}
+
+.c-gamecard__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-thumbnail {
+  width: 148px;
+  border-top: var(--global-borderWidth) solid #3C7DD9;
+  border-left: var(--global-borderWidth) solid #3C7DD9;
+  border-right: var(--global-borderWidth) solid #3C7DD9;
+  border-radius: var(--global-borderRadius-sm) var(--global-borderRadius-sm) 0 0;
+}
+
+.c-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.c-price__oldprice {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+.c-price__discount {
+  font-size: 14px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+
+.c-gamecard__rating {
+  color: #B5BB56;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+
+.c-microinteraction {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-button__zp {
+  border: var(--global-borderWidth) solid #3C7DD9;
+  padding: 6px 10px 6px 10px;
+  border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
+  margin-bottom: 24px;
+}
+
+.c-button__p {
+  border-top: var(--global-borderWidth) solid #3C7DD9;
+  border-bottom: var(--global-borderWidth) solid #3C7DD9;
+  padding: 6px 26px 6px 26px;
+  margin-bottom: 24px;
+}
+
+.c-button__g {
+  border: var(--global-borderWidth) solid #3C7DD9;
+  padding: 6px 14px 6px 14px;
+  border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
+  margin-bottom: 24px;
+}
+
+.c-button__micro {
+  background-color: white;
+  color: #4992F1;
+  font-size: 14px;
+}
+
+.c-button__micro:hover {
+  background-color: #4992F1;
+  color: white;
+}
+
+.c-button:active {
+  background-color: #4992F1;
+  color: white;
 }
 
 /*------------------------------------*\
@@ -912,6 +1022,10 @@ input::placeholder {
   max-width: 27em !important;
 }
 
+.u-max-width-s {
+  max-width: 29.5em !important;
+}
+
 .u-max-width-sm {
   max-width: 39em !important;
 }
@@ -925,7 +1039,7 @@ input::placeholder {
 }
 
 .u-max-width-xl {
-  max-width: 100em !important;
+  max-width: 110em !important;
 }
 
 .u-max-width-none {
@@ -1138,6 +1252,7 @@ input::placeholder {
     margin: 0 0 calc(var(--global-whitespace) * 2.5);
   }
 
+
   .o-section-flex {
     display: flex;
     flex-direction: row;
@@ -1166,6 +1281,81 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .o-layout__cards {
+    justify-content: space-between;
+  }
+
+  .o-layout__micro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .c-cheap__games {
+    margin: 0 auto;
+  }
+
+  .c-lesscheap__games {
+    margin: 0 auto;
+  }
+
+  .c-leastcheap__games {
+    margin: 0 auto;
+  }
+
+  .c-gamecard {
+    max-width: 224px;
+    max-height: 200px;
+  }
+
+  .c-thumbnail {
+    width: 224px;
+  }
+
+  .c-card__title-card {
+    margin-top: var(--global-whitespace-sm);
+    font-size: 18px;
+  }
+
+  .c-gamecard__rating {
+    font-size: 24px;
+  }
+
+  .c-price__discount {
+    font-size: 16px;
+  }
+
+  .c-price__oldprice {
+    font-size: 11px;
+  }
+
+  .c-button__zp {
+    border: var(--global-borderWidth) solid #3C7DD9;
+    padding: 8px 18px 8px 18px;
+    border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
+    margin-bottom: 24px;
+  }
+  
+  .c-button__p {
+    border-top: var(--global-borderWidth) solid #3C7DD9;
+    border-bottom: var(--global-borderWidth) solid #3C7DD9;
+    padding: 8px 34px 8px 34px;
+    margin-bottom: 24px;
+  }
+  
+  .c-button__g {
+    border: var(--global-borderWidth) solid #3C7DD9;
+    padding: 8px 22px 8px 22px;
+    border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
+    margin-bottom: 24px;
+  }
+  
+  .c-button__micro {
+    background-color: white;
+    color: #4992F1;
+    font-size: 16px;
   }
 }
 
