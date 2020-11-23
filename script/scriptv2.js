@@ -1,84 +1,42 @@
 let showResult = (queryResponse) => {
-    let filterSale = queryResponse.filter(element => element.isOnSale == "1");
-    var item1 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item2 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item3 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item4 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item5 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item6 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    console.log(item1)
-    console.log(item2)
+    let filterMixed = queryResponse.filter(element => element.steamRatingText == "Very Positive");
+    var item1 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    var item2 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+
+    while (item1 == item2) {
+        var item1 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+        var item2 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    }
+
+    let filterMostlyPositive = queryResponse.filter(element => element.steamRatingText == "Mostly Positive");
+    var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+
+    while (item3 == item4) {
+        var item3 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+        var item4 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    }
+
+    let filterPositive = queryResponse.filter(element => element.steamRatingText == "Mixed");
+    var item5 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+    var item6 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+
+    while (item5 == item6) {
+        var item5 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+        var item6 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    }
 
     cheapGame1(item1);
     cheapGame2(item2);
-    cheapGame2(item3);
-    cheapGame2(item4);
-    cheapGame2(item5);
-    cheapGame2(item6);
+    cheapGame3(item3);
+    cheapGame4(item4);
+    cheapGame5(item5);
+    cheapGame6(item6);
 
     // for (const obj of queryResponse) {
     //     console.log(obj)
     // }
     //console.log(queryResponse[0].title, queryResponse[0].normalPrice, queryResponse[0].salePrice, queryResponse[0].steamRatingPercent, queryResponse[0].thumb);
-};
-
-let showResultMixed = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Mixed");
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
-};
-
-let showResultMostlyPositive = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Mostly Positive");
-
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
-};
-
-let showResultVeryPositive = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Very Positive");
-
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
 };
 
 const cheapGame1 = function(item) {
@@ -193,31 +151,31 @@ const getAPI = async () => {
     const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResult(data);
+        showResult(data);
     //console.log(data);
 };
 
-const getAPIMixed = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+const getAPIverycheap = async () => {
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=5&upperPrice=10&onSale=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResultMixed(data);
+        showResult(data);
     //console.log(data);
 };
 
-const getAPIMostlyPositive = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+const getAPIcheap = async () => {
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=10&upperPrice=15&onSale=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResultMostlyPositive(data);
+        showResult(data);
     //console.log(data);
 };
 
-const getAPIVeryPositive = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+const getAPInotcheap = async () => {
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=15&upperPrice=100&onSale=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResultVeryPositive(data);
+        showResult(data);
     //console.log(data);
 };
 
@@ -226,16 +184,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_zeerpositief = document.querySelector(".js-zeerpositief");
     btn_zeerpositief.addEventListener('click', event => {
-        getAPIVeryPositive();
+        getAPIverycheap();
     });
 
     const btn_positief = document.querySelector(".js-positief");
     btn_positief.addEventListener('click', event => {
-        getAPIMostlyPositive();
+        getAPIcheap();
     });
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
     btn_gemiddeld.addEventListener('click', event => {
-        getAPIMixed();
+        getAPInotcheap();
     });
 });
