@@ -871,6 +871,7 @@ input::placeholder {
   background: linear-gradient(#FFFFFF, #E7EEF9);
   max-width: 148px;
   max-height: 148px;
+  cursor: pointer;
 }
 
 .c-gamecard__info {
@@ -922,6 +923,7 @@ input::placeholder {
   padding: 6px 10px 6px 10px;
   border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .c-button__p {
@@ -929,6 +931,7 @@ input::placeholder {
   border-bottom: var(--global-borderWidth) solid #3C7DD9;
   padding: 6px 26px 6px 26px;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .c-button__g {
@@ -936,6 +939,7 @@ input::placeholder {
   padding: 6px 14px 6px 14px;
   border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .c-button__micro {
