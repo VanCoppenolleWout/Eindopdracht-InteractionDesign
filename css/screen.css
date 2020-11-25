@@ -860,10 +860,15 @@ input::placeholder {
 }
 
 .c-card__title-card {
-  margin-bottom: var(--global-whitespace-md);
+  margin-bottom: var(--global-whitespace-sm);
+  line-height: 1.3;
   font-size: 14px;
   font-weight: 500;
+  max-width: 190px;
+  padding: 0 8px;
+  text-align: center;
 }
+
 
 .c-gamecard {
   border: var(--global-borderWidth) solid #3C7DD9;
@@ -910,6 +915,7 @@ input::placeholder {
   color: #B5BB56;
   font-size: 16px;
   margin-bottom: 0;
+  padding-bottom: 8px; 
 }
 
 
@@ -1320,7 +1326,7 @@ input::placeholder {
 
   .c-card__title-card {
     margin-top: var(--global-whitespace-sm);
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .c-gamecard__rating {

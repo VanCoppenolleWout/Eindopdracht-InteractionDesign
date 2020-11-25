@@ -1,16 +1,29 @@
 let showResult = (queryResponse) => {
     let filterMixed = queryResponse.filter(element => element.steamRatingText == "Very Positive");
     var item1 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    while (item1.title == "Fire") {
+        var item1 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    }
     var item2 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    while (item2.title == "Fire") {
+        var item2 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    }
 
     while (item1 == item2) {
         var item1 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
         var item2 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
     }
 
+    // de game Anno 1800 geeft een ander formaat terug dat ik niet kan gebruiken
     let filterMostlyPositive = queryResponse.filter(element => element.steamRatingText == "Mostly Positive");
     var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    while (item3.title == "Anno 1800" || item3.title == "Fire") {
+        var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    }
     var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    while (item4.title == "Anno 1800"|| item4.title == "Fire") {
+        var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    }
 
     while (item3 == item4) {
         var item3 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
@@ -36,7 +49,6 @@ let showResult = (queryResponse) => {
     // for (const obj of queryResponse) {
     //     console.log(obj)
     // }
-    //console.log(queryResponse[0].title, queryResponse[0].normalPrice, queryResponse[0].salePrice, queryResponse[0].steamRatingPercent, queryResponse[0].thumb);
 };
 
 const cheapGame1 = function(item) {
@@ -155,28 +167,11 @@ const getAPI = async () => {
     //console.log(data);
 };
 
-const getAPIverycheap = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=5&upperPrice=10&onSale=1`)
+const getAPIparam = async (lowerprice, upperprice) => {
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=${lowerprice}&upperPrice=${upperprice}&onSale=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
         showResult(data);
-    //console.log(data);
-};
-
-const getAPIcheap = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=10&upperPrice=15&onSale=1`)
-        .then((r) => r.json())
-        .catch((err) => console.error('An error occured', err));
-        showResult(data);
-    //console.log(data);
-};
-
-const getAPInotcheap = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=15&upperPrice=100&onSale=1`)
-        .then((r) => r.json())
-        .catch((err) => console.error('An error occured', err));
-        showResult(data);
-    //console.log(data);
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -184,16 +179,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_zeerpositief = document.querySelector(".js-zeerpositief");
     btn_zeerpositief.addEventListener('click', event => {
-        getAPIverycheap();
+        getAPIparam(0, 10);
     });
 
     const btn_positief = document.querySelector(".js-positief");
     btn_positief.addEventListener('click', event => {
-        getAPIcheap();
+        getAPIparam(10, 15);
     });
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
     btn_gemiddeld.addEventListener('click', event => {
-        getAPInotcheap();
+        getAPIparam(15, 100);
     });
 });
