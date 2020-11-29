@@ -899,7 +899,7 @@ input::placeholder {
   border-radius: var(--global-borderRadius-sm);
   background: linear-gradient(#ffffff, #e7eef9);
   max-width: 148px;
-  max-height: 148px;
+  max-height: 180px;
   cursor: pointer;
 }
 
@@ -1304,7 +1304,7 @@ input::placeholder {
 
   .c-gamecard {
     max-width: 224px;
-    max-height: 200px;
+    max-height: 280px;
   }
 
   .c-thumbnail {
