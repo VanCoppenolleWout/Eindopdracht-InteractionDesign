@@ -267,23 +267,6 @@ input::placeholder {
   padding: 24px;
 }
 
-.o-row--login {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-}
-
-/* size modifiers */
-
-/*
-  .o-row--lg {
-    padding-top: var(--global-whitespace);
-    padding-bottom: var(--global-whitespace);
-  }
-  */
-
 @media (min-width: 768px) {
   .o-row {
     padding-left: var(--global-whitespace-lg);
@@ -1433,7 +1416,7 @@ input::placeholder {
   }
 
   .o-row {
-    margin: 80px;
+    margin: 80px 200px;
     padding: 0;
   }
 
