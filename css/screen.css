@@ -94,7 +94,7 @@ html {
   line-height: 1.5;
   font-family: "Inter Web", Helvetica, arial, sans-serif;
   color: var(--global-color-neutral-xxxx-dark);
-  background: linear-gradient(#C1D5F6, #DFE7F3);
+  background: linear-gradient(#c1d5f6, #dfe7f3);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -553,6 +553,33 @@ input::placeholder {
 }
 
 /*
+      Component: SVG
+      ---
+      SVG's
+  */
+
+.c-svg__5times {
+  fill: #30ac0e;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.c-svg__4times {
+  fill: #309116;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.c-svg__3times {
+  fill: #916616;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.c-svg__2times {
+  fill: #915816;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/*
       Component: Card
       ---
       Card with box shadow
@@ -829,8 +856,6 @@ input::placeholder {
       Class to put on form buttons or
   */
 
-
-
 .c-button {
   font-size: 16px;
   font-weight: 700;
@@ -869,11 +894,10 @@ input::placeholder {
   text-align: center;
 }
 
-
 .c-gamecard {
-  border: var(--global-borderWidth) solid #3C7DD9;
+  border: var(--global-borderWidth) solid #3c7dd9;
   border-radius: var(--global-borderRadius-sm);
-  background: linear-gradient(#FFFFFF, #E7EEF9);
+  background: linear-gradient(#ffffff, #e7eef9);
   max-width: 148px;
   max-height: 148px;
   cursor: pointer;
@@ -887,9 +911,9 @@ input::placeholder {
 
 .c-thumbnail {
   width: 148px;
-  border-top: var(--global-borderWidth) solid #3C7DD9;
-  border-left: var(--global-borderWidth) solid #3C7DD9;
-  border-right: var(--global-borderWidth) solid #3C7DD9;
+  border-top: var(--global-borderWidth) solid #3c7dd9;
+  border-left: var(--global-borderWidth) solid #3c7dd9;
+  border-right: var(--global-borderWidth) solid #3c7dd9;
   border-radius: var(--global-borderRadius-sm) var(--global-borderRadius-sm) 0 0;
 }
 
@@ -912,37 +936,37 @@ input::placeholder {
 }
 
 .c-gamecard__rating {
-  color: #B5BB56;
+  color: #b5bb56;
   font-size: 16px;
   margin-bottom: 0;
-  padding-bottom: 8px; 
+  padding-bottom: 8px;
 }
-
 
 .c-microinteraction {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .c-button__zp {
-  border: var(--global-borderWidth) solid #3C7DD9;
-  padding: 6px 10px 6px 10px;
+  border: var(--global-borderWidth) solid #3c7dd9;
+  padding: 6px 20px 6px 20px;
   border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
   margin-bottom: 24px;
   cursor: pointer;
 }
 
 .c-button__p {
-  border-top: var(--global-borderWidth) solid #3C7DD9;
-  border-bottom: var(--global-borderWidth) solid #3C7DD9;
-  padding: 6px 26px 6px 26px;
+  border-top: var(--global-borderWidth) solid #3c7dd9;
+  border-bottom: var(--global-borderWidth) solid #3c7dd9;
+  padding: 6px 20px 6px 20px;
   margin-bottom: 24px;
   cursor: pointer;
 }
 
 .c-button__g {
-  border: var(--global-borderWidth) solid #3C7DD9;
-  padding: 6px 14px 6px 14px;
+  border: var(--global-borderWidth) solid #3c7dd9;
+  padding: 6px 20px 6px 20px;
   border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
   margin-bottom: 24px;
   cursor: pointer;
@@ -950,17 +974,17 @@ input::placeholder {
 
 .c-button__micro {
   background-color: white;
-  color: #4992F1;
+  color: #4992f1;
   font-size: 14px;
 }
 
 .c-button__micro:hover {
-  background-color: #4992F1;
+  background-color: #4992f1;
   color: white;
 }
 
 .c-button:active {
-  background-color: #4992F1;
+  background-color: #4992f1;
   color: white;
 }
 
@@ -1204,42 +1228,6 @@ input::placeholder {
   .u-5-of-6-bp2 {
     width: 83.3333333333% !important;
   }
-}
-
-@media (min-width: 992px) {
-  .u-1-of-2-bp3 {
-    width: 50% !important;
-  }
-  .u-1-of-3-bp3 {
-    width: 33.3333333333% !important;
-  }
-  .u-2-of-3-bp3 {
-    width: 66.6666666667% !important;
-  }
-  .u-1-of-4-bp3 {
-    width: 25% !important;
-  }
-  .u-3-of-4-bp3 {
-    width: 75% !important;
-  }
-  .u-1-of-5-bp3 {
-    width: 20% !important;
-  }
-  .u-2-of-5-bp3 {
-    width: 40% !important;
-  }
-  .u-3-of-5-bp3 {
-    width: 60% !important;
-  }
-  .u-4-of-5-bp3 {
-    width: 80% !important;
-  }
-  .u-1-of-6-bp3 {
-    width: 16.6666666667% !important;
-  }
-  .u-5-of-6-bp3 {
-    width: 83.3333333333% !important;
-  }
 
   .c-card__body {
     padding: 0;
@@ -1261,7 +1249,6 @@ input::placeholder {
     max-width: 240px;
     margin: 0 0 calc(var(--global-whitespace) * 2.5);
   }
-
 
   .o-section-flex {
     display: flex;
@@ -1342,30 +1329,66 @@ input::placeholder {
   }
 
   .c-button__zp {
-    border: var(--global-borderWidth) solid #3C7DD9;
+    border: var(--global-borderWidth) solid #3c7dd9;
     padding: 8px 18px 8px 18px;
     border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
     margin-bottom: 24px;
   }
-  
+
   .c-button__p {
-    border-top: var(--global-borderWidth) solid #3C7DD9;
-    border-bottom: var(--global-borderWidth) solid #3C7DD9;
+    border-top: var(--global-borderWidth) solid #3c7dd9;
+    border-bottom: var(--global-borderWidth) solid #3c7dd9;
     padding: 8px 34px 8px 34px;
     margin-bottom: 24px;
   }
-  
+
   .c-button__g {
-    border: var(--global-borderWidth) solid #3C7DD9;
+    border: var(--global-borderWidth) solid #3c7dd9;
     padding: 8px 22px 8px 22px;
     border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
     margin-bottom: 24px;
   }
-  
+
   .c-button__micro {
     background-color: white;
-    color: #4992F1;
+    color: #4992f1;
     font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp3 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp3 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp3 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
   }
 }
 

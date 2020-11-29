@@ -1,3 +1,9 @@
+let html_5stars = `<svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+
+let html_4stars = `<svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+let html_3stars = `<svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+let html_2stars = `<svg class="c-svg__2times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__2times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+
 let showResult = (queryResponse) => {
     let filterMixed = queryResponse.filter(element => element.steamRatingText == "Very Positive");
     var item1 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
@@ -21,7 +27,7 @@ let showResult = (queryResponse) => {
         var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
     }
     var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
-    while (item4.title == "Anno 1800"|| item4.title == "Fire") {
+    while (item4.title == "Anno 1800" || item4.title == "Fire") {
         var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
     }
 
@@ -66,7 +72,19 @@ const cheapGame1 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
+    
 };
 
 const cheapGame2 = function(item) {
@@ -84,7 +102,18 @@ const cheapGame2 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating2");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame3 = function(item) {
@@ -102,7 +131,18 @@ const cheapGame3 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating3");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame4 = function(item) {
@@ -120,7 +160,18 @@ const cheapGame4 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating4");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame5 = function(item) {
@@ -138,7 +189,18 @@ const cheapGame5 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating5");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame6 = function(item) {
@@ -156,11 +218,22 @@ const cheapGame6 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating6");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const getAPI = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
         showResult(data);
@@ -189,6 +262,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
     btn_gemiddeld.addEventListener('click', event => {
-        getAPIparam(15, 100);
+        getAPIparam(15, 30);
     });
 });
