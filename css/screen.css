@@ -878,6 +878,7 @@ input::placeholder {
 }
 
 .c-gamecard {
+  display: flex;
   border: var(--global-borderWidth) solid #3c7dd9;
   border-radius: var(--global-borderRadius-sm);
   background: linear-gradient(#ffffff, #e7eef9);
@@ -902,6 +903,7 @@ input::placeholder {
 
 .c-price {
   display: flex;
+  margin-top: auto;
   flex-direction: row;
   align-items: center;
 }
