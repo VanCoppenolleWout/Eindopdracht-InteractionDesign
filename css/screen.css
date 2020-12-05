@@ -288,33 +288,6 @@ input::placeholder {
 }
 
 /*
-      Objects: section
-      ---
-      Creates vertical whitespace between adjacent sections inside a row
-  */
-
-.o-section {
-  position: relative;
-}
-
-.o-section + .o-section {
-  padding-top: var(--global-whitespace);
-}
-
-@media (min-width: 768px) {
-  .o-section--lg + .o-section--lg,
-  .o-section--xl + .o-section--xl {
-    padding-top: var(--global-whitespace-lg);
-  }
-}
-
-@media (min-width: 992px) {
-  .o-section--xl + .o-section--xl {
-    padding-top: var(--global-whitespace-xxl);
-  }
-}
-
-/*
       Objects: Layout
       ---
       The layout object provides us with a column-style layout system. This object
@@ -338,123 +311,6 @@ input::placeholder {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: var(--global-whitespace);
-}
-
-/* gutter modifiers, these affect o-layout__item too */
-
-.o-layout--gutter {
-  margin: 0 -12px;
-}
-
-.o-layout--gutter > .o-layout__item {
-  padding: 0 12px;
-}
-
-.o-layout--gutter-sm {
-  margin: 0 -6px;
-}
-
-.o-layout--gutter-sm > .o-layout__item {
-  padding: 0 6px;
-}
-
-.o-layout--gutter-lg {
-  margin: 0 calc(var(--global-whitespace) * -1);
-}
-
-.o-layout--gutter-lg > .o-layout__item {
-  padding: 0 var(--global-whitespace);
-}
-
-.o-layout--gutter-xl {
-  margin: 0 calc(var(--global-whitespace-lg) * -1);
-}
-
-.o-layout--gutter-xl > .o-layout__item {
-  padding: 0 var(--global-whitespace-lg);
-}
-
-/* reverse horizontal row modifier */
-
-.o-layout--row-reverse {
-  flex-direction: row-reverse;
-}
-
-/* Horizontal alignment modifiers*/
-
-.o-layout--justify-start {
-  justify-content: flex-start;
-}
-
-.o-layout--justify-end {
-  justify-content: flex-end;
-}
-
-.o-layout--justify-center {
-  justify-content: center;
-}
-
-.o-layout--justify-space-around {
-  justify-content: space-around;
-}
-
-.o-layout--justify-space-evenly {
-  justify-content: space-evenly;
-}
-
-.o-layout--justify-space-between {
-  justify-content: space-between;
-}
-
-/* Vertical alignment modifiers */
-
-.o-layout--align-start {
-  align-items: flex-start;
-}
-
-.o-layout--align-end {
-  align-items: flex-end;
-}
-
-.o-layout--align-center {
-  align-items: center;
-}
-
-.o-layout--align-baseline {
-  align-items: baseline;
-}
-
-/* Vertical alignment modifiers that only work if there is one than one flex item */
-
-.o-layout--align-content-start {
-  align-content: start;
-}
-
-.o-layout--align-content-end {
-  align-content: end;
-}
-
-.o-layout--align-content-center {
-  align-content: center;
-}
-
-.o-layout--align-content-space-around {
-  align-content: space-around;
-}
-
-.o-layout--align-content-space-between {
-  align-content: space-between;
-}
-
-/*
-      Objects: List
-      ---
-      Small reusable object to remove default list styling from lists
-  */
-
-.o-list {
-  list-style: none;
-  padding: 0;
 }
 
 /*
@@ -484,23 +340,6 @@ input::placeholder {
 
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
-}
-
-/*
-      Object: Hide accessible
-      ---
-      Accessibly hide any element
-  */
-
-.o-hide-accessible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 /*------------------------------------*\
@@ -568,17 +407,6 @@ input::placeholder {
       Card with box shadow
   */
 
-/* Add padding to child for more flexibility */
-.c-card__body,
-.c-card__footer {
-}
-
-.c-card__footer {
-  text-align: center;
-  border-top: var(--global-borderWidth) solid
-    var(--global-color-neutral-xxx-light);
-}
-
 .c-card__title {
   font-size: 12px;
   line-height: calc(var(--global-baseline) * 2);
@@ -597,15 +425,6 @@ input::placeholder {
   line-height: normal;
 }
 
-/* This allows c-card__body and __footer to have equal padding everywhere */
-
-.c-card__body > *:last-child,
-.c-card__footer > *:last-child,
-.c-card__body > *:last-child > *:last-child,
-.c-card__footer > *:last-child > *:last-child {
-  margin-bottom: 0;
-}
-
 @media (min-width: 27em) {
   .c-card__body {
     padding: var(--global-whitespace-xl);
@@ -614,25 +433,6 @@ input::placeholder {
   .c-card__title {
     margin-bottom: var(--global-whitespace-xl);
   }
-}
-
-/*
-      Component: Forms
-      ---
-      Everything form related here
-  */
-
-.c-form-field {
-  max-width: 280px;
-  margin: 0 auto var(--global-whitespace-md);
-}
-
-.c-form-field--option {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
 }
 
 .c-description {
@@ -683,95 +483,6 @@ input::placeholder {
   color: var(--global-input-color);
 }
 
-/* option input for checkboxes and radio buttons */
-
-.c-option {
-  margin-right: var(--global-whitespace-sm);
-}
-
-.c-option-list {
-  margin-bottom: 24px;
-}
-
-.c-option-list__item {
-  margin-bottom: 12px;
-}
-
-.c-custom-option {
-  display: flex;
-  --custom-option-borderColor: var(--global-input-borderColor);
-  --custom-option-focus-borderColor: var(--global-input-focus-borderColor);
-  --custom-option-hover-borderColor: var(--global-input-hover-borderColor);
-}
-
-.c-custom-option__fake-input {
-  display: flex;
-  height: 16px;
-  width: 16px;
-  border: 1px solid var(--custom-option-borderColor);
-  margin-right: 8px;
-  text-shadow: var(--global-input-boxShadow);
-}
-
-.c-custom-option__fake-input--checkbox {
-  border-radius: var(--global-borderRadius);
-
-  align-items: center;
-  justify-content: center;
-}
-
-.c-custom-option__fake-input--radio {
-  border-radius: 100%;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.c-custom-option__symbol {
-  opacity: 0;
-  display: block;
-}
-
-.c-custom-option__fake-input--checkbox .c-custom-option__symbol {
-  width: 10px;
-  height: 10px;
-  color: var(--global-color-alpha);
-}
-
-.c-custom-option__fake-input--radio .c-custom-option__symbol {
-  width: 6px;
-  height: 6px;
-  background-color: var(--global-color-alpha);
-  border-radius: 100%;
-}
-
-.c-option--hidden:checked + .c-custom-option {
-  opacity: 1;
-}
-
-.c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
-  opacity: 1;
-  fill: var(--global-color-alpha-light);
-  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  -moz-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  -o-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75); /* linear */
-}
-
-.c-custom-option:hover {
-  --custom-option-borderColor: var(--custom-option-hover-borderColor);
-}
-
-.c-custom-option:focus,
-.c-custom-option:active {
-  --custom-option-borderColor: var(--custom-option-focus-borderColor);
-}
-
-.c-custom-option:focus .c-custom-option__fake-input,
-.c-custom-option:active .c-custom-option__fake-input {
-  box-shadow: 0 0 0 3px #3385ff36;
-}
-
 /*
       Component: Image
       ---
@@ -798,39 +509,6 @@ input::placeholder {
 
 .c-label--option {
   padding-bottom: 0;
-}
-
-/*
-      Component: Custom Toggle
-      ---
-      Class to put on toggles
-  */
-
-.c-custom-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.c-custom-toggle__fake-input {
-  width: 48px;
-  height: 24px;
-  background: #f5f6fa;
-  margin-right: 8px;
-  border-radius: 34px;
-  display: flex;
-  border: 1px solid var(--global-color-neutral-xxx-light);
-}
-
-.c-custom-toggle__fake-input::after {
-  content: "";
-  display: block;
-  width: 22px;
-  height: 22px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16);
-  transition: all var(--transition-alpha);
 }
 
 /*
@@ -895,6 +573,7 @@ input::placeholder {
 
 .c-thumbnail {
   width: 148px;
+  max-height: 55px;
   border-top: var(--global-borderWidth) solid #3c7dd9;
   border-left: var(--global-borderWidth) solid #3c7dd9;
   border-right: var(--global-borderWidth) solid #3c7dd9;
@@ -1079,139 +758,9 @@ input::placeholder {
   margin: 0 auto;
 }
 
-/*
-      Utilities: text
-      Utility classes to create smaller or bigger test
-  */
-
-.u-text-sm {
-  font-size: 14px;
-}
-
-/*
-      Utility: Widths
-      ---
-      Utility classes to put specific widths onto elements
-      Will be mostly used on o-layout__item
-  */
-
-.u-width-auto {
-  width: auto !important;
-}
-
-.u-1-of-2 {
-  width: 50% !important;
-}
-
-.u-1-of-3 {
-  width: 33.3333333333% !important;
-}
-
-.u-2-of-3 {
-  width: 66.6666666667% !important;
-}
-
-.u-1-of-4 {
-  width: 25% !important;
-}
-
-.u-3-of-4 {
-  width: 75% !important;
-}
-
-.u-1-of-5 {
-  width: 20% !important;
-}
-
-.u-2-of-5 {
-  width: 40% !important;
-}
-
-.u-3-of-5 {
-  width: 60% !important;
-}
-
-.u-4-of-5 {
-  width: 80% !important;
-}
-
-.u-1-of-6 {
-  width: 16.6666666667% !important;
-}
-
-.u-5-of-6 {
-  width: 83.3333333333% !important;
-}
-
-@media (min-width: 576px) {
-  .u-1-of-2-bp1 {
-    width: 50% !important;
-  }
-  .u-1-of-3-bp1 {
-    width: 33.3333333333% !important;
-  }
-  .u-2-of-3-bp1 {
-    width: 66.6666666667% !important;
-  }
-  .u-1-of-4-bp1 {
-    width: 25% !important;
-  }
-  .u-3-of-4-bp1 {
-    width: 75% !important;
-  }
-  .u-1-of-5-bp1 {
-    width: 20% !important;
-  }
-  .u-2-of-5-bp1 {
-    width: 40% !important;
-  }
-  .u-3-of-5-bp1 {
-    width: 60% !important;
-  }
-  .u-4-of-5-bp1 {
-    width: 80% !important;
-  }
-  .u-1-of-6-bp1 {
-    width: 16.6666666667% !important;
-  }
-  .u-5-of-6-bp1 {
-    width: 83.3333333333% !important;
-  }
-}
-
 @media (min-width: 768px) {
-  .u-1-of-2-bp2 {
-    width: 50% !important;
-  }
-  .u-1-of-3-bp2 {
-    width: 33.3333333333% !important;
-  }
-  .u-2-of-3-bp2 {
-    width: 66.6666666667% !important;
-  }
-  .u-1-of-4-bp2 {
-    width: 25% !important;
-  }
-  .u-3-of-4-bp2 {
-    width: 75% !important;
-  }
-  .u-1-of-5-bp2 {
-    width: 20% !important;
-  }
-  .u-2-of-5-bp2 {
-    width: 40% !important;
-  }
-  .u-3-of-5-bp2 {
-    width: 60% !important;
-  }
-  .u-4-of-5-bp2 {
-    width: 80% !important;
-  }
-  .u-1-of-6-bp2 {
-    width: 16.6666666667% !important;
-  }
-  .u-5-of-6-bp2 {
-    width: 83.3333333333% !important;
+  .c-thumbnail {
+    max-height: 84px;
   }
 
   .c-card__body {
@@ -1341,77 +890,7 @@ input::placeholder {
   }
 }
 
-@media (min-width: 992px) {
-  .u-1-of-2-bp3 {
-    width: 50% !important;
-  }
-  .u-1-of-3-bp3 {
-    width: 33.3333333333% !important;
-  }
-  .u-2-of-3-bp3 {
-    width: 66.6666666667% !important;
-  }
-  .u-1-of-4-bp3 {
-    width: 25% !important;
-  }
-  .u-3-of-4-bp3 {
-    width: 75% !important;
-  }
-  .u-1-of-5-bp3 {
-    width: 20% !important;
-  }
-  .u-2-of-5-bp3 {
-    width: 40% !important;
-  }
-  .u-3-of-5-bp3 {
-    width: 60% !important;
-  }
-  .u-4-of-5-bp3 {
-    width: 80% !important;
-  }
-  .u-1-of-6-bp3 {
-    width: 16.6666666667% !important;
-  }
-  .u-5-of-6-bp3 {
-    width: 83.3333333333% !important;
-  }
-}
-
 @media (min-width: 1200px) {
-  .u-1-of-2-bp4 {
-    width: 50% !important;
-  }
-  .u-1-of-3-bp4 {
-    width: 33.3333333333% !important;
-  }
-  .u-2-of-3-bp4 {
-    width: 66.6666666667% !important;
-  }
-  .u-1-of-4-bp4 {
-    width: 25% !important;
-  }
-  .u-3-of-4-bp4 {
-    width: 75% !important;
-  }
-  .u-1-of-5-bp4 {
-    width: 20% !important;
-  }
-  .u-2-of-5-bp4 {
-    width: 40% !important;
-  }
-  .u-3-of-5-bp4 {
-    width: 60% !important;
-  }
-  .u-4-of-5-bp4 {
-    width: 80% !important;
-  }
-  .u-1-of-6-bp4 {
-    width: 16.6666666667% !important;
-  }
-  .u-5-of-6-bp4 {
-    width: 83.3333333333% !important;
-  }
-
   .o-container {
     max-width: 100%;
     margin: 0;
@@ -1452,104 +931,6 @@ input::placeholder {
 
   .c-logo {
     font-size: 32px;
-  }
-}
-
-/*------------------------------------*\
-  #MEDIA
-  \*------------------------------------*/
-
-/*
-      Media Queries
-      ---
-      EXAMPLE Media Queries for Responsive Design.
-      These examples override the primary ('mobile first') styles.
-      USE THEM INLINE!
-  */
-
-/* Extra small devices (portrait phones, less than 576px)
-  No media query since this is the default in mobile first design
-  */
-
-/* Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {}
-  */
-
-/* Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {}
-  */
-
-/* Large devices (landscape tablets, desktops, 992px and up)
-  @media (min-width: 992px) {}
-  */
-
-/* Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {}
-  */
-
-/*
-      Print styles.
-      ---
-      Inlined to avoid the additional HTTP request:
-      http://www.phpied.com/delay-loading-your-print-css/
-  */
-
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster:
-          http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  /*
-      * Don't show links that are fragment identifiers,
-      * or use the `javascript:` pseudo protocol
-      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
-      * Printing Tables:
-      * http://css-discuss.incutio.com/wiki/Printing_Tables
-      */
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
+    margin-bottom: 32px;
   }
 }
