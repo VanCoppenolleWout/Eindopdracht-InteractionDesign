@@ -90,6 +90,7 @@
   */
 
 html {
+  height: 100%;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Inter Web", Helvetica, arial, sans-serif;
@@ -99,6 +100,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 *,
 *:before,
@@ -758,7 +761,48 @@ input::placeholder {
   margin: 0 auto;
 }
 
+
 @media (min-width: 768px) {
+  .c-grid__body {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 160px);
+  }
+
+  .c-grid__item-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+
+  .c-grid__desc {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .c-grid__item-description {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+
+  .c-grid__item-title2 {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+
+  .c-grid__item-buttons {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: var(--global-whitespace-sm);
+  }
+
+  .c-grid__item-mockup {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    justify-self: center;
+  }
+
   .c-thumbnail {
     max-height: 84px;
   }
@@ -768,7 +812,7 @@ input::placeholder {
   }
 
   .c-card__title {
-    margin-bottom: calc(var(--global-whitespace) / 2);
+    margin: 0;
   }
 
   .c-card__title2 {
@@ -786,8 +830,8 @@ input::placeholder {
 
   .o-section-flex {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .c-form-field {
@@ -797,11 +841,15 @@ input::placeholder {
 
   .c-image {
     max-width: 300px;
-    margin: 0 64px 0 0;
+    margin-top: 0;
   }
 
   .c-button {
-    width: 168px;
+    width: 280px;
+  }
+
+  .u-mb-md {
+    margin: 0;
   }
 
   .c-logo {
@@ -890,7 +938,30 @@ input::placeholder {
   }
 }
 
+@media (min-width: 1024px) {
+  .o-section-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .c-button {
+    width: 168px;
+  }
+}
+
 @media (min-width: 1200px) {
+  .c-grid__body {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
+
+  .c-grid__item-buttons {
+    margin-top: var(--global-whitespace-xl);
+  }
+
   .o-container {
     max-width: 100%;
     margin: 0;

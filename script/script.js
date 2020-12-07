@@ -1,84 +1,46 @@
-let showResult = (queryResponse) => {
-    let filterSale = queryResponse.filter(element => element.isOnSale == "1");
-    var item1 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item2 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item3 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item4 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item5 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    var item6 = filterSale[Math.floor(Math.random() * filterSale.length)];
-    console.log(item1)
-    console.log(item2)
+let html_5stars = `<svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__5times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
 
+let html_4stars = `<svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__4times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+let html_3stars = `<svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__3times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+let html_2stars = `<svg class="c-svg__2times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg><svg class="c-svg__2times" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`;
+
+let showResult = (queryResponse) => {
+    let filterPositive = queryResponse.filter(element => element.steamRatingText == "Very Positive");
+    var item1 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+    var item2 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+
+    while (item1 == item2) {
+        var item1 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+        var item2 = filterPositive[Math.floor(Math.random() * filterPositive.length)];
+    }
+
+    let filterMostlyPositive = queryResponse.filter(element => element.steamRatingText == "Mostly Positive");
+    var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+
+    while (item3 == item4) {
+        var item3 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+        var item4 = filterMostlyPositive[Math.floor(Math.random() * filterMostlyPositive.length)];
+    }
+
+    let filterMixed = queryResponse.filter(element => element.steamRatingText == "Mixed");
+    var item5 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    var item6 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+
+    while (item5 == item6) {
+        var item5 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+        var item6 = filterMixed[Math.floor(Math.random() * filterMixed.length)];
+    }
     cheapGame1(item1);
     cheapGame2(item2);
-    cheapGame2(item3);
-    cheapGame2(item4);
-    cheapGame2(item5);
-    cheapGame2(item6);
+    cheapGame3(item3);
+    cheapGame4(item4);
+    cheapGame5(item5);
+    cheapGame6(item6);
 
     // for (const obj of queryResponse) {
     //     console.log(obj)
     // }
-    //console.log(queryResponse[0].title, queryResponse[0].normalPrice, queryResponse[0].salePrice, queryResponse[0].steamRatingPercent, queryResponse[0].thumb);
-};
-
-let showResultMixed = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Mixed");
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
-};
-
-let showResultMostlyPositive = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Mostly Positive");
-
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
-};
-
-let showResultVeryPositive = (queryResponse) => {
-    let filter = queryResponse.filter(element => element.steamRatingText == "Very Positive");
-
-    var item1 = filter[Math.floor(Math.random() * filter.length)];
-    var item2 = filter[Math.floor(Math.random() * filter.length)];
-    var item3 = filter[Math.floor(Math.random() * filter.length)];
-    var item4 = filter[Math.floor(Math.random() * filter.length)];
-    var item5 = filter[Math.floor(Math.random() * filter.length)];
-    var item6 = filter[Math.floor(Math.random() * filter.length)];
-    console.log(item1)
-    console.log(item2)
-
-    cheapGame1(item1);
-    cheapGame2(item2);
-    cheapGame3(item3);
-    cheapGame4(item4);
-    cheapGame5(item5);
-    cheapGame6(item6);
 };
 
 const cheapGame1 = function(item) {
@@ -96,7 +58,19 @@ const cheapGame1 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
+    
 };
 
 const cheapGame2 = function(item) {
@@ -114,7 +88,18 @@ const cheapGame2 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating2");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame3 = function(item) {
@@ -132,7 +117,18 @@ const cheapGame3 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating3");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame4 = function(item) {
@@ -150,7 +146,18 @@ const cheapGame4 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating4");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame5 = function(item) {
@@ -168,7 +175,18 @@ const cheapGame5 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating5");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const cheapGame6 = function(item) {
@@ -186,39 +204,33 @@ const cheapGame6 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating6");
-    gameRating.innerHTML = `${item.steamRatingPercent}/100`;
+    if (item.steamRatingPercent > 85) {
+        gameRating.innerHTML = html_5stars;
+    }
+    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+        gameRating.innerHTML = html_4stars;
+    }
+    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+        gameRating.innerHTML = html_3stars;
+    }
+    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+        gameRating.innerHTML = html_2stars;
+    }
 };
 
 const getAPI = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResult(data);
+        showResult(data);
     //console.log(data);
 };
 
-const getAPIMixed = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
+const getAPIparam = async (lowerprice, upperprice) => {
+    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=2&lowerPrice=${lowerprice}&upperPrice=${upperprice}&onSale=1`)
         .then((r) => r.json())
         .catch((err) => console.error('An error occured', err));
-    showResultMixed(data);
-    //console.log(data);
-};
-
-const getAPIMostlyPositive = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
-        .then((r) => r.json())
-        .catch((err) => console.error('An error occured', err));
-    showResultMostlyPositive(data);
-    //console.log(data);
-};
-
-const getAPIVeryPositive = async () => {
-    const data = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1`)
-        .then((r) => r.json())
-        .catch((err) => console.error('An error occured', err));
-    showResultVeryPositive(data);
-    //console.log(data);
+        showResult(data);
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -226,16 +238,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_zeerpositief = document.querySelector(".js-zeerpositief");
     btn_zeerpositief.addEventListener('click', event => {
-        getAPIVeryPositive();
+        getAPIparam(0, 10);
     });
 
     const btn_positief = document.querySelector(".js-positief");
     btn_positief.addEventListener('click', event => {
-        getAPIMostlyPositive();
+        getAPIparam(10, 15);
     });
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
     btn_gemiddeld.addEventListener('click', event => {
-        getAPIMixed();
+        getAPIparam(15, 30);
     });
 });
