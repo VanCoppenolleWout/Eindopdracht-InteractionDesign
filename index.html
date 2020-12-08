@@ -21,7 +21,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/screen.css" />
-    <title>Cheapthrills</title>
+    <title>Cheapthrills met grid</title>
   </head>
   <body>
     <section class="o-row">
@@ -29,27 +29,30 @@
             <h1 class="c-logo">
               Cheapthrills
             </h1>
-              <div class="c-card__body">
                 <div class="c-card__info">
-                <h2 class="c-card__title">
-                Beschikbaar vanaf 17/12/20
-                </h2>
-                  <h3 class="c-card__title2">Gewoonweg Goede Game Deals</h3>
-                  <p class="c-description">Bekijk welke GamersGate deals in jouw
-                    prijsbereik passen
-                  </p>
-                  <div class="o-section-flex">
-                    <p class="c-form-field">
-                      <input class="c-input" type="email" name="username" id="username" placeholder="Jouw email" required>
-                      <form action="cheapthrills.html">
-                        <p class="u-mb-md">
-                          <button class="o-button-reset c-button">Notify me</button>
-                    </p>
-                      </form>
-                  </div>
+                    <div class="c-grid__body">
+                        <h2 class="c-card__title c-grid__item-title">
+                            Beschikbaar vanaf 17/12/20
+                        </h2>
+                        <div class="c-grid__desc">
+                            <h3 class="c-card__title2 c-grid__item-title2">Gewoonweg Goede Game Deals</h3>
+                        
+                        <p class="c-description c-grid__item-description">Bekijk welke GamersGate deals in jouw
+                            prijsbereik passen
+                        </p>
+                        </div>
+                        <div class="o-section-flex c-grid__item-buttons">
+                            <p class="c-form-field">
+                            <input class="c-input" type="email" name="username" id="username" placeholder="Jouw email" required>
+                            <form action="cheapthrills.html">
+                                <p class="u-mb-md">
+                                <button class="o-button-reset c-button">Notify me</button>
+                            </p>
+                            </form>
+                        </div>
+                        <img class="c-image c-grid__item-mockup" src="img/cheapthrills_mockup.png" alt="App Cheapthrills">
+                    </div>
                 </div>
-                  <img class="c-image" src="img/cheapthrills_mockup.png" alt="App Cheapthrills">
-              </div>
         </div>
     </section>
 </body>
