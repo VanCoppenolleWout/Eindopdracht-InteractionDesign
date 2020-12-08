@@ -103,10 +103,10 @@ html {
   color: var(--global-color-neutral-xxxx-dark);
   background: linear-gradient(var(--global-color-background-xx-light), var(--global-color-background-x-light));
   box-sizing: border-box;
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 
 *,
@@ -836,7 +836,7 @@ input::placeholder {
   .o-section-flex {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .c-form-field {
