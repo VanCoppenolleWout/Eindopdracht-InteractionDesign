@@ -43,9 +43,9 @@
 
   --global-color-background-xx-light: #c1d5f6;
   --global-color-background-x-light: #dfe7f3;
-  --global-color-card-xx-light : #ffffff;
-  --global-color-card-x-light : #e7eef9;
-  
+  --global-color-card-xx-light: #ffffff;
+  --global-color-card-x-light: #e7eef9;
+
   --global-color-neutral-xxx-light: #3c7dd9;
   --global-color-neutral-xx-light: #caccd4;
   --global-color-neutral-x-light: #b5b6c0;
@@ -101,13 +101,15 @@ html {
   line-height: 1.5;
   font-family: "Inter Web", Helvetica, arial, sans-serif;
   color: var(--global-color-neutral-xxxx-dark);
-  background: linear-gradient(var(--global-color-background-xx-light), var(--global-color-background-x-light));
+  background: linear-gradient(
+    var(--global-color-background-xx-light),
+    var(--global-color-background-x-light)
+  );
   box-sizing: border-box;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 *,
 *:before,
@@ -567,7 +569,10 @@ input::placeholder {
   display: flex;
   border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
   border-radius: var(--global-borderRadius-sm);
-  background: linear-gradient(var(--global-color-card-xx-light), var(--global-color-card-x-light));
+  background: linear-gradient(
+    var(--global-color-card-xx-light),
+    var(--global-color-card-x-light)
+  );
   max-width: 9.25em;
   max-height: 11.25em;
   cursor: pointer;
@@ -582,9 +587,12 @@ input::placeholder {
 .c-thumbnail {
   width: 9.25em;
   max-height: 55px;
-  border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  border-left: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  border-right: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+  border-top: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
+  border-left: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
+  border-right: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
   border-radius: var(--global-borderRadius-sm) var(--global-borderRadius-sm) 0 0;
 }
 
@@ -629,8 +637,10 @@ input::placeholder {
 }
 
 .c-button__p {
-  border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  border-bottom: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+  border-top: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
+  border-bottom: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
   padding: 6px 20px 6px 20px;
   margin-bottom: var(--global-whitespace);
   cursor: pointer;
@@ -766,7 +776,6 @@ input::placeholder {
   margin: 0 auto;
 }
 
-
 @media (min-width: 768px) {
   .c-grid__body {
     display: grid;
@@ -806,6 +815,7 @@ input::placeholder {
     grid-column: 2/3;
     grid-row: 1/5;
     justify-self: end;
+    align-self: center;
   }
 
   .c-thumbnail {
@@ -916,21 +926,25 @@ input::placeholder {
   }
 
   .c-button__zp {
-    border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+    border: var(--global-borderWidth) solid
+      var(--global-color-neutral-xxx-light);
     padding: 8px 18px 8px 18px;
     border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
     margin-bottom: var(--global-whitespace);
   }
 
   .c-button__p {
-    border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-    border-bottom: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+    border-top: var(--global-borderWidth) solid
+      var(--global-color-neutral-xxx-light);
+    border-bottom: var(--global-borderWidth) solid
+      var(--global-color-neutral-xxx-light);
     padding: 8px 34px 8px 34px;
     margin-bottom: var(--global-whitespace);
   }
 
   .c-button__g {
-    border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+    border: var(--global-borderWidth) solid
+      var(--global-color-neutral-xxx-light);
     padding: 8px 22px 8px 22px;
     border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
     margin-bottom: var(--global-whitespace);
@@ -952,6 +966,15 @@ input::placeholder {
 
   .c-button {
     width: 168px;
+  }
+
+  .c-image {
+    max-width: 16em;
+  }
+
+  .c-card__title2 {
+    /* 22em werkt niet */
+    max-width: 352px;
   }
 }
 
