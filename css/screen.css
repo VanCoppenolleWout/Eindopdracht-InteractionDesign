@@ -56,6 +56,7 @@
   --global-color-neutral-xx-dark: #4b4c60;
   --global-color-neutral-xxx-dark: #35374d;
   --global-color-neutral-xxxx-dark: #20223a;
+  --global-color-neutral-xxxxx-dark: #000000;
 
   /* border stuff */
   --global-borderRadius: 30px;
@@ -236,24 +237,6 @@ hr {
   margin: 0 0 var(--global-whitespace);
 }
 
-a,
-a:visited {
-  transition: all var(--global-transitionTiming-alpha);
-  color: var(--global-color-alpha);
-  outline-color: var(--global-link-BoxShadowColor);
-  outline-width: medium;
-  outline-offset: 2px;
-}
-
-a:hover,
-a:focus {
-  color: var(--global-color-alpha-light);
-}
-
-a:active {
-  color: var(--global-color-alpha-dark);
-}
-
 label,
 input {
   display: block;
@@ -369,6 +352,10 @@ input::placeholder {
   font-weight: 600;
 }
 
+.c-link__title {
+  text-decoration: none;
+  color: var(--global-color-neutral-xxxxx-dark);
+}
 .c-logo__symbol {
   height: 100%;
 }
@@ -528,6 +515,7 @@ input::placeholder {
   */
 
 .c-button {
+  cursor: pointer;
   font-size: 1em;
   font-weight: 700;
   border-radius: var(--global-borderRadius);
@@ -630,25 +618,29 @@ input::placeholder {
 
 .c-button__zp {
   border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  padding: 6px 20px 6px 20px;
+  width: 6.5rem;
+  padding: 0.5em 0 0.5em 0;
+  text-align: center;
   border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
   margin-bottom: var(--global-whitespace);
   cursor: pointer;
 }
 
 .c-button__p {
-  border-top: var(--global-borderWidth) solid
-    var(--global-color-neutral-xxx-light);
-  border-bottom: var(--global-borderWidth) solid
-    var(--global-color-neutral-xxx-light);
-  padding: 6px 20px 6px 20px;
+  border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+  border-bottom: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+  padding: 0.5em 0 0.5em 0;
+  width: 6.5rem;
+  text-align: center;
   margin-bottom: var(--global-whitespace);
   cursor: pointer;
 }
 
 .c-button__g {
   border: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  padding: 6px 20px 6px 20px;
+  padding: 0.5em 0 0.5em 0;
+  width: 6.5rem;
+  text-align: center;
   border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
   margin-bottom: var(--global-whitespace);
   cursor: pointer;
@@ -660,10 +652,17 @@ input::placeholder {
   font-size: 0.875em;
 }
 
+.c-button__micro:focus {
+  background-color: var(--global-color-button);
+  color: white;
+}
+
 .c-button__micro:hover {
   background-color: var(--global-color-button);
   color: white;
 }
+
+
 
 .c-button:active {
   background-color: var(--global-color-button);
@@ -883,8 +882,17 @@ input::placeholder {
 
   .o-layout__micro {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .c-microinteraction {
+    margin-top: var(--global-whitespace-md);
+  }
+
+  .c-card__title {
+    margin-bottom: 0;
   }
 
   .c-cheap__games {
@@ -928,7 +936,8 @@ input::placeholder {
   .c-button__zp {
     border: var(--global-borderWidth) solid
       var(--global-color-neutral-xxx-light);
-    padding: 8px 18px 8px 18px;
+    padding: 0.5em 0 0.5em 0;
+    width: 7.5rem;
     border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
     margin-bottom: var(--global-whitespace);
   }
@@ -938,14 +947,16 @@ input::placeholder {
       var(--global-color-neutral-xxx-light);
     border-bottom: var(--global-borderWidth) solid
       var(--global-color-neutral-xxx-light);
-    padding: 8px 34px 8px 34px;
+    padding: 0.5em 0 0.5em 0;
+    width: 7.5rem;
     margin-bottom: var(--global-whitespace);
   }
 
   .c-button__g {
     border: var(--global-borderWidth) solid
       var(--global-color-neutral-xxx-light);
-    padding: 8px 22px 8px 22px;
+    padding: 0.5em 0 0.5em 0;
+    width: 7.5rem;
     border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
     margin-bottom: var(--global-whitespace);
   }
@@ -976,9 +987,39 @@ input::placeholder {
     /* 22em werkt niet */
     max-width: 352px;
   }
+
+  .c-button__p {
+    width: 9em;
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+  .c-button__zp {
+    width: 9em;
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+  .c-button__g {
+    width: 9em;
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+  .u-max-width-xl {
+    max-width: 76em !important;
+  }
 }
 
 @media (min-width: 1200px) {
+
+
+  .c-image {
+    max-width: 21em;
+  }
+}
+
+@media (min-width: 1540px) {
   .c-grid__body {
     display: grid;
 
@@ -1031,5 +1072,9 @@ input::placeholder {
   .c-logo {
     font-size: 2em;
     margin-bottom: var(--global-whitespace-lg);
+  }
+
+  .u-max-width-xl {
+    max-width: 110em !important;
   }
 }

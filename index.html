@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
@@ -42,7 +42,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/screen.css" />
@@ -50,8 +50,10 @@
   </head>
   <body>
     <section class="o-row">
-      <div class="o-container u-max-width-xs u-max-width-lg u-max-width-xl">
-        <h1 class="c-logo">Cheapthrills</h1>
+      <div class="o-container u-max-width-xs u-max-width-lg u-max-width-md u-max-width-xl">
+        <h1 class="c-logo" style="margin-bottom: 32px">
+          <a class="c-link__title" href="index.html">Cheapthrills</a>
+        </h1>
         <div class="c-card__info">
           <div class="c-grid__body">
             <h2 class="c-card__title c-grid__item-title">
@@ -63,24 +65,26 @@
               </h3>
 
               <p class="c-description c-grid__item-description">
-                Bekijk welke GamersGate deals in jouw prijsbereik passen
+                Bekijk welke GamersGate deals in jouw prijsbereik passen.
               </p>
             </div>
+            <form action="cheapthrills.html">
             <div class="o-section-flex c-grid__item-buttons">
+              
               <p class="c-form-field">
                 <input
                   class="c-input"
                   type="email"
-                  name="username"
-                  id="username"
+                  name="email"
+                  id="email"
                   placeholder="Jouw email"
                   required
                 />
               </p>
 
-              <form action="cheapthrills.html">
+              
                 <p class="u-mb-md">
-                  <button class="o-button-reset c-button">Notify me</button>
+                  <button class="o-button-reset c-button">Informeer me</button>
                 </p>
               </form>
             </div>
