@@ -313,7 +313,6 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 17.5em;
 }
 
 /*
@@ -978,6 +977,10 @@ input::placeholder {
     background-color: var(--global-color-card-xx-light);
     color: #4992f1;
     font-size: 1em;
+  }
+
+  .o-layout__validation {
+    max-width: 17.5em;
   }
 }
 
