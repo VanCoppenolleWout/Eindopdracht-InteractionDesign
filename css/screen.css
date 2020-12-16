@@ -313,6 +313,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 17.5em;
 }
 
 /*
@@ -517,7 +518,7 @@ input::placeholder {
 }
 
 .c-label__error {
-  color:  var(--global-color-neutral-red);
+  color: var(--global-color-neutral-red);
   font-weight: 500;
 }
 
@@ -1068,7 +1069,8 @@ input::placeholder {
 
   .c-description {
     font-size: 1.5em;
-    max-width: 28.125em;
+    /* em werkt niet */
+    max-width: 450px;
   }
 
   .c-form-field {
