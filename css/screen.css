@@ -258,7 +258,7 @@ input::placeholder {
 
 .o-row {
   position: relative;
-  padding: 24px;
+  padding: 1.5em;
 }
 
 @media (min-width: 768px) {
@@ -627,8 +627,10 @@ input::placeholder {
 }
 
 .c-button__p {
-  border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
-  border-bottom: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+  border-top: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
+  border-bottom: var(--global-borderWidth) solid
+    var(--global-color-neutral-xxx-light);
   padding: 0.5em 0 0.5em 0;
   width: 6.5rem;
   text-align: center;
@@ -661,8 +663,6 @@ input::placeholder {
   background-color: var(--global-color-button);
   color: white;
 }
-
-
 
 .c-button:active {
   background-color: var(--global-color-button);
@@ -812,9 +812,8 @@ input::placeholder {
 
   .c-grid__item-mockup {
     grid-column: 2/3;
-    grid-row: 1/4;
+    grid-row: 1/5;
     justify-self: end;
-    align-self: center;
   }
 
   .c-thumbnail {
@@ -1005,14 +1004,16 @@ input::placeholder {
     text-align: center;
     padding: 0.5em 0 0.5em 0;
   }
+
+  .c-grid__item-mockup {
+    align-self: center;
+  }
   .u-max-width-xl {
     max-width: 76em !important;
   }
 }
 
 @media (min-width: 1200px) {
-
-
   .c-image {
     max-width: 21em;
   }
@@ -1047,7 +1048,8 @@ input::placeholder {
 
   .c-card__title2 {
     font-size: 3.5em;
-    max-width: 34.375em;
+    /* em werkt niet */
+    max-width: 550px;
     font-weight: 500;
   }
 
