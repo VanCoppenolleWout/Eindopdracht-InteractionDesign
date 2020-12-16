@@ -37,14 +37,9 @@ let showResult = (queryResponse) => {
     cheapGame4(item4);
     cheapGame5(item5);
     cheapGame6(item6);
-
-    // for (const obj of queryResponse) {
-    //     console.log(obj)
-    // }
 };
 
 const cheapGame1 = function(item) {
-
     const gameTitle = document.querySelector(".js-title");
     gameTitle.innerHTML = `${item.title}`;
 
@@ -58,23 +53,21 @@ const cheapGame1 = function(item) {
     gameThumb.innerHTML = `<img class="c-thumbnail" src="${item.thumb}" alt="">`;
     
     const gameRating = document.querySelector(".js-rating");
-    if (item.steamRatingPercent > 85) {
+    if (item.steamRatingPercent >= 85) {
         gameRating.innerHTML = html_5stars;
     }
-    else if (item.steamRatingPercent > 80 && item.steamRatingPercent < 85) {
+    else if (item.steamRatingPercent >= 80 && item.steamRatingPercent < 85) {
         gameRating.innerHTML = html_4stars;
     }
-    else if (item.steamRatingPercent > 70 && item.steamRatingPercent < 80) {
+    else if (item.steamRatingPercent >= 70 && item.steamRatingPercent < 80) {
         gameRating.innerHTML = html_3stars;
     }
-    else if (item.steamRatingPercent > 50 && item.steamRatingPercent < 70) {
+    else if (item.steamRatingPercent < 70) {
         gameRating.innerHTML = html_2stars;
-    }
-    
+    };
 };
 
 const cheapGame2 = function(item) {
-
     const gameTitle = document.querySelector(".js-title2");
     gameTitle.innerHTML = `${item.title}`;
 
@@ -103,7 +96,6 @@ const cheapGame2 = function(item) {
 };
 
 const cheapGame3 = function(item) {
-
     const gameTitle = document.querySelector(".js-title3");
     gameTitle.innerHTML = `${item.title}`;
 
@@ -132,7 +124,6 @@ const cheapGame3 = function(item) {
 };
 
 const cheapGame4 = function(item) {
-
     const gameTitle = document.querySelector(".js-title4");
     gameTitle.innerHTML = `${item.title}`;
 
@@ -161,7 +152,6 @@ const cheapGame4 = function(item) {
 };
 
 const cheapGame5 = function(item) {
-
     const gameTitle = document.querySelector(".js-title5");
     gameTitle.innerHTML = `${item.title}`;
 
@@ -190,7 +180,6 @@ const cheapGame5 = function(item) {
 };
 
 const cheapGame6 = function(item) {
-
     const gameTitle = document.querySelector(".js-title6");
     gameTitle.innerHTML = `${item.title}`;
 
