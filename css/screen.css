@@ -805,7 +805,7 @@ input::placeholder {
   .c-grid__item-mockup {
     grid-column: 2/3;
     grid-row: 1/5;
-    justify-self: center;
+    justify-self: end;
   }
 
   .c-thumbnail {

@@ -248,6 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
     btn_gemiddeld.addEventListener('click', event => {
-        getAPIparam(15, 30);
+        getAPIparam(15, 100);
     });
 });
