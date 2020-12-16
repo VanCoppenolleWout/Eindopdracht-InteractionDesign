@@ -58,6 +58,8 @@
   --global-color-neutral-xxxx-dark: #20223a;
   --global-color-neutral-xxxxx-dark: #000000;
 
+  --global-color-neutral-red: rgb(151, 0, 0);
+
   /* border stuff */
   --global-borderRadius: 30px;
   --global-borderRadius-sm: 15px;
@@ -307,6 +309,12 @@ input::placeholder {
   margin-bottom: var(--global-whitespace);
 }
 
+.o-layout__validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*
       Object: Button reset
       ---
@@ -506,6 +514,11 @@ input::placeholder {
 
 .c-label--option {
   padding-bottom: 0;
+}
+
+.c-label__error {
+  color:  var(--global-color-neutral-red);
+  font-weight: 500;
 }
 
 /*

@@ -40,7 +40,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <script src="script/validation.js"></script>
+    <link rel="manifest" href="manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
@@ -71,10 +72,9 @@
             </div>
             <form action="cheapthrills.html">
             <div class="o-section-flex c-grid__item-buttons">
-              
-              <p class="c-form-field">
+              <p class="c-form-field js-email-field has-error">
                 <input
-                  class="c-input"
+                  class="c-input js-email-input"
                   type="email"
                   name="email"
                   id="email"
@@ -82,10 +82,14 @@
                   required
                 />
               </p>
-
               
                 <p class="u-mb-md">
-                  <button class="o-button-reset c-button">Informeer me</button>
+                  <div class="o-layout__validation">
+                  <button class="js-button o-button-reset c-button">Informeer me</button>
+                  <label class="c-label__email js-email-label" for="email">
+                    <span class="c-label js-email-error-message is-visible"></span>
+                  </label>
+                </div>
                 </p>
               </form>
             </div>
