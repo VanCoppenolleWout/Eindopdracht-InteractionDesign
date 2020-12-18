@@ -227,12 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btn_zeerpositief = document.querySelector(".js-zeerpositief");
     btn_zeerpositief.addEventListener('click', event => {
-        getAPIparam(0, 10);
+        getAPIparam(0, 5);
     });
 
     const btn_positief = document.querySelector(".js-positief");
     btn_positief.addEventListener('click', event => {
-        getAPIparam(10, 15);
+        getAPIparam(5, 15);
     });
 
     const btn_gemiddeld = document.querySelector(".js-gemiddeld");
